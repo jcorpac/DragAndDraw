@@ -10,6 +10,7 @@ import android.os.Parcelable;
 public class Box implements Parcelable{
     private PointF mOrigin;
     private PointF mCurrent;
+    private float angle = 0;
 
     public Box(PointF origin) {
         mOrigin = origin;
@@ -26,6 +27,14 @@ public class Box implements Parcelable{
 
     public PointF getOrigin() {
         return mOrigin;
+    }
+
+    public float getAngle() {
+        return angle;
+    }
+
+    public void setAngle(float angle) {
+        this.angle = angle;
     }
 
     @Override
